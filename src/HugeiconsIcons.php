@@ -25,7 +25,7 @@ class HugeiconsIcons extends IconSet
         // Panels icon aliases
         PanelsIconAlias::GLOBAL_SEARCH_FIELD => Hugeicons::GlobalSearch,
         PanelsIconAlias::PAGES_DASHBOARD_ACTIONS_FILTER => Hugeicons::Filter,
-        PanelsIconAlias::PAGES_DASHBOARD_NAVIGATION_ITEM => Hugeicons::DashboardCircle,
+        PanelsIconAlias::PAGES_DASHBOARD_NAVIGATION_ITEM => Hugeicons::House05,
         PanelsIconAlias::PAGES_PASSWORD_RESET_REQUEST_PASSWORD_RESET_ACTIONS_LOGIN => Hugeicons::Login01,
         PanelsIconAlias::PAGES_PASSWORD_RESET_REQUEST_PASSWORD_RESET_ACTIONS_LOGIN_RTL => Hugeicons::Login01,
         PanelsIconAlias::RESOURCES_PAGES_EDIT_RECORD_NAVIGATION_ITEM => Hugeicons::Edit01,
