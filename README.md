@@ -64,7 +64,7 @@ HugeiconsIcons::make()->overrideIcons([
 
 ## Credits
 
-- [Hugeicons](https://example.com) for the icon library
+- [Hugeicons](https://hugeicons.com/) for the icon library
 - [Filament Icons](https://github.com/filafly/filament-icons) for the base icon system
 
 ## License
