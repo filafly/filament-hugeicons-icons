@@ -1,6 +1,6 @@
 <?php
 
-namespace Vendor\Icons\Hugeicons\Enums;
+namespace Filafly\Icons\Hugeicons\Enums;
 
 enum Hugeicons: string
 {
