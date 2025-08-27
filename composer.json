@@ -1,33 +1,33 @@
 {
-  "name": "vendor/filament-{iconset}-icons",
-  "description": "{IconSet} icon pack for Filament Icons",
+  "name": "filafly/filament-hugeicons-icons",
+  "description": "Hugeicons icon pack for Filament Icons",
   "type": "library",
   "license": "MIT",
   "keywords": [
     "Laravel",
     "Filament",
     "icons",
-    "{IconSet}",
+    "Hugeicons",
     "replace",
     "swap"
   ],
-  "homepage": "https://your-website.com",
+  "homepage": "https://filafly.com/plugins/filament-icons",
   "authors": [
     {
       "role": "Developer",
-      "name": "Your Name",
-      "email": "email@example.com"
+      "name": "Nolan Nordlund",
+      "email": "nolan@filafly.com"
     }
   ],
   "require": {
     "php": "^8.2",
     "filafly/filament-icons": "^2.0",
-    "{blade-icon-package}": "^x.x",
+    "afatmustafa/blade-hugeicons": "*",
     "filament/filament": "^4.0"
   },
   "autoload": {
     "psr-4": {
-      "{Vendor}\\Icons\\{IconSet}\\": "src/"
+      "{Vendor}\\Icons\\Hugeicons\\": "src/"
     }
   },
   "minimum-stability": "stable",

@@ -1,35 +1,72 @@
-# 🎨 Filament Icons Package Template
+<p class="filament-hidden" align="center">
+    <img src="https://your-domain.com/images/filament-hugeicons-icons.png" alt="Banner" style="width: 100%; max-width: 800px;" />
+</p>
 
-This template helps you create custom icon packs for Filament Icons, allowing you to replace default Filament icons with your preferred icon set.
+# Filament Hugeicons Icons
 
-## 🚀 Quick Start
+A Hugeicons icon set implementation for [Filament Icons](https://github.com/filafly/filament-icons), allowing for instant replacement of all icons used within the Filament framework.
 
-1. **Clone or download this template**
-2. **Run the setup script:**
-   ```bash
-   php setup.php
-   ```
-3. **Follow the prompts to configure your package**
+## Installation
 
-The setup script will:
-- Configure your package name and namespace
-- Set up the correct icon set references
-- Update all placeholders with your values
-- Replace this README with package documentation
-- Delete itself when complete
+You can install the package via composer:
 
-## 📝 What You'll Need
+```bash
+composer require filafly/filament-hugeicons-icons
+```
 
-Before running setup, gather:
-- Your vendor name (e.g., 'acme')
-- Icon set name in different cases (lowercase, PascalCase)
-- The Blade icons package name and version
-- Whether your icon set has multiple styles
+After the package is installed, you must register the plugin in your Filament Panel provider:
 
-## 🔧 After Setup
+```php
+use Filafly\Icons\Hugeicons\HugeiconsIcons;
 
-Once configured, you'll need to:
-1. Run `composer install`
-2. Update icon mappings in your main plugin class
-3. Add all available icons to the enum
-4. Configure styles if applicable
+public function panel(Panel $panel): Panel
+{
+    return $panel
+        ->plugin(HugeiconsIcons::make());
+}
+```
+
+## Overriding individual icons
+
+You can change which icon is used for any given Filament alias:
+
+### Using icon aliases
+```php
+use Filafly\Icons\Hugeicons\HugeiconsIcons;
+use Filafly\Icons\Hugeicons\Enums\Hugeicons;
+use Filament\Tables\View\TablesIconAlias;
+use Filament\Actions\View\ActionsIconAlias;
+
+// Override a single alias
+HugeiconsIcons::make()->overrideAlias(TablesIconAlias::ACTIONS_FILTER, Hugeicons::FunnelSimple);
+
+// Override multiple aliases at once
+HugeiconsIcons::make()->overrideAliases([
+    TablesIconAlias::ACTIONS_FILTER => Hugeicons::FunnelSimple,
+    ActionsIconAlias::BUTTON_GROUP_DROPDOWN_INDICATOR => Hugeicons::CaretUpDown,
+]);
+```
+
+### Using icon enum cases
+```php
+use Filafly\Icons\Hugeicons\HugeiconsIcons;
+use Filafly\Icons\Hugeicons\Enums\Hugeicons;
+
+// Replace every instance of one icon with another
+HugeiconsIcons::make()->overrideIcon(Hugeicons::User, Hugeicons::UserCircle);
+
+// Replace multiple icons at once
+HugeiconsIcons::make()->overrideIcons([
+    Hugeicons::User => Hugeicons::UserCircle,
+    Hugeicons::Heart => Hugeicons::HeartFilled,
+]);
+```
+
+## Credits
+
+- [Hugeicons](https://example.com) for the icon library
+- [Filament Icons](https://github.com/filafly/filament-icons) for the base icon system
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
