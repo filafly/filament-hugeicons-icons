@@ -23,7 +23,7 @@ class HugeiconsIcons extends IconSet
 
     protected array $iconMap = [
         // Panels icon aliases
-        PanelsIconAlias::GLOBAL_SEARCH_FIELD => Hugeicons::GlobalSearch,
+        PanelsIconAlias::GLOBAL_SEARCH_FIELD => Hugeicons::Search01,
         PanelsIconAlias::PAGES_DASHBOARD_ACTIONS_FILTER => Hugeicons::Filter,
         PanelsIconAlias::PAGES_DASHBOARD_NAVIGATION_ITEM => Hugeicons::House05,
         PanelsIconAlias::PAGES_PASSWORD_RESET_REQUEST_PASSWORD_RESET_ACTIONS_LOGIN => Hugeicons::Login01,
