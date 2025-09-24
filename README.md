@@ -1,5 +1,5 @@
 <p class="filament-hidden" align="center">
-    <img src="https://your-domain.com/images/filament-hugeicons-icons.png" alt="Banner" style="width: 100%; max-width: 800px;" />
+    <img src="https://filafly.com/images/filafly-filament-hugeicons-icons.jpg" alt="Banner" style="width: 100%; max-width: 800px;" />
 </p>
 
 # Filament Hugeicons Icons
