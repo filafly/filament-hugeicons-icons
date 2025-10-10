@@ -2,7 +2,10 @@
 
 namespace Filafly\Icons\Hugeicons\Enums;
 
-enum Hugeicons: string
+use Filament\Support\Contracts\ScalableIcon;
+use Filament\Support\Enums\IconSize;
+
+enum Hugeicons: string implements ScalableIcon
 {
     case Abacus = 'abacus';
     case Absolute = 'absolute';
@@ -4527,4 +4530,11 @@ enum Hugeicons: string
     case ZoomSquare = 'zoom-square';
     case Zsh = 'zsh';
     case Zzz = 'zzz';
+
+    public function getIconForSize(IconSize $size): string
+    {
+        return match ($size) {
+            default => "hugeicons-$this->value",
+        };
+    }
 }
