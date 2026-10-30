@@ -67,6 +67,10 @@ HugeiconsIcons::make()->overrideIcons([
 - [Hugeicons](https://hugeicons.com/) for the icon library
 - [Filament Icons](https://github.com/filafly/filament-icons) for the base icon system
 
+## From FilaFly
+
+FilaFly also makes premium themes for Filament panels: Lucent, Prizm, Cypher and Citrus. [Browse the themes](https://filafly.com/themes?utm_source=github&utm_medium=readme&utm_campaign=hugeicons-icons).
+
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
