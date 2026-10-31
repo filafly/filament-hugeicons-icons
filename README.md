@@ -6,6 +6,8 @@
 
 A Hugeicons icon set implementation for [Filament Icons](https://github.com/filafly/filament-icons), allowing for instant replacement of all icons used within the Filament framework.
 
+More about this package on FilaFly: [Hugeicons icons for Filament on FilaFly](https://filafly.com/plugins/hugeicons-icons).
+
 ## Installation
 
 You can install the package via composer:
@@ -35,15 +37,15 @@ You can change which icon is used for any given Filament alias:
 use Filafly\Icons\Hugeicons\HugeiconsIcons;
 use Filafly\Icons\Hugeicons\Enums\Hugeicons;
 use Filament\Tables\View\TablesIconAlias;
-use Filament\Actions\View\ActionsIconAlias;
+use Filament\View\PanelsIconAlias;
 
 // Override a single alias
-HugeiconsIcons::make()->overrideAlias(TablesIconAlias::ACTIONS_FILTER, Hugeicons::FunnelSimple);
+HugeiconsIcons::make()->overrideAlias(TablesIconAlias::ACTIONS_FILTER, Hugeicons::FilterHorizontal);
 
 // Override multiple aliases at once
 HugeiconsIcons::make()->overrideAliases([
-    TablesIconAlias::ACTIONS_FILTER => Hugeicons::FunnelSimple,
-    ActionsIconAlias::BUTTON_GROUP_DROPDOWN_INDICATOR => Hugeicons::CaretUpDown,
+    TablesIconAlias::ACTIONS_FILTER => Hugeicons::FilterHorizontal,
+    PanelsIconAlias::GLOBAL_SEARCH_FIELD => Hugeicons::Search02,
 ]);
 ```
 
@@ -57,10 +59,11 @@ HugeiconsIcons::make()->overrideIcon(Hugeicons::User, Hugeicons::UserCircle);
 
 // Replace multiple icons at once
 HugeiconsIcons::make()->overrideIcons([
-    Hugeicons::User => Hugeicons::UserCircle,
-    Hugeicons::Heart => Hugeicons::HeartFilled,
+    Hugeicons::User->value => Hugeicons::UserCircle,
+    Hugeicons::Search01->value => Hugeicons::Search02,
 ]);
 ```
+> PHP arrays do not support enums as keys so `->value` is necessary if you want to reference the enum
 
 ## Credits
 
